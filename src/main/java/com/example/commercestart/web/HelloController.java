@@ -16,8 +16,12 @@ public class HelloController {
         return "Hello, " + customer.getName();
     }
 
+    @GetMapping("/hello/customer/{customerId}")
+    public String helloCustomerWithVariable(@PathVariable Long customerId) {
+        return "Hello, you request customer: ID=" + customerId;
+    }
     @GetMapping("/hello/customer")
-    public String helloCustomerWithPath(@RequestParam Long id) {
+    public String helloCustomerWithParam(@RequestParam Long id) {
         return "Hello, you request customer: ID=" + id;
     }
 

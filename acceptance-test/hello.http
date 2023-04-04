@@ -13,3 +13,6 @@ Content-Type: application/json
 
 ### request with request params
 GET http://localhost:8080/hello/customer?id=1
+
+### request with path variable
+GET http://localhost:8080/hello/customer/2

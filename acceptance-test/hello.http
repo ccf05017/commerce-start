@@ -1,1 +1,12 @@
+###  simple request
 GET http://localhost:8080/hello
+
+### request with body
+POST http://localhost:8080/hello/customer
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "poppo",
+  "job": "server developer"
+}

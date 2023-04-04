@@ -10,3 +10,6 @@ Content-Type: application/json
   "name": "poppo",
   "job": "server developer"
 }
+
+### request with request params
+GET http://localhost:8080/hello/customer?id=1

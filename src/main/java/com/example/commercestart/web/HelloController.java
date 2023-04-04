@@ -1,10 +1,7 @@
 package com.example.commercestart.web;
 
 import com.example.commercestart.domain.Customer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
@@ -17,6 +14,11 @@ public class HelloController {
     @PostMapping("/hello/customer")
     public String helloCustomer(@RequestBody Customer customer) {
         return "Hello, " + customer.getName();
+    }
+
+    @GetMapping("/hello/customer")
+    public String helloCustomerWithPath(@RequestParam Long id) {
+        return "Hello, you request customer: ID=" + id;
     }
 
 }
